@@ -11,7 +11,7 @@ module.exports = {
     filename: "[name]-bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "public"),
+    contentBase: path.join(__dirname, "../public"),
     compress: true,
     overlay: true,
     open: true

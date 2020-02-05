@@ -1,0 +1,14 @@
+.menu {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    margin-left: 3.5rem;
+  }
+  &__link {
+    @include text-font;
+    text-decoration: none;
+    color: $text-side-color;
+  }
+}
