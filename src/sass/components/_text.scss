@@ -1,0 +1,24 @@
+.title {
+  @include title-font;
+  &--decor {
+    position: relative;
+    margin-left: 30px;
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 100%;
+      background-color: $decor-color;
+      position: absolute;
+      left: -30px;
+    }
+  }
+}
+.text {
+  @include text-font;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+.special {
+  color: $decor-color;
+}
