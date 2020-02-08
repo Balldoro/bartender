@@ -24,8 +24,7 @@
     transform-origin: left;
     transition: transform 0.25s ease-in-out;
   }
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     transform: scaleX(1);
   }
   &--big {
@@ -54,8 +53,7 @@
       transform-origin: left;
       transition: transform 0.25s ease-in-out color 0.25s;
     }
-    &:hover::before,
-    &:focus::before {
+    &:hover::before {
       transform: scaleX(1);
     }
     &:hover {

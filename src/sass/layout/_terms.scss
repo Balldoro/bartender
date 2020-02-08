@@ -1,0 +1,61 @@
+.terms {
+  text-align: center;
+  &__content-container {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    @include text-font;
+  }
+  &__btn {
+    border: none;
+    background-color: #fff;
+    border: 1px solid rgb(216, 216, 216);
+    border-bottom: none;
+    width: 100%;
+    height: 65px;
+    padding: 0 15px;
+    cursor: pointer;
+    &:last-child {
+      border-bottom: 1px solid rgb(216, 216, 216);
+    }
+    &--active {
+      background-color: $decor-color;
+      color: $text-side-color;
+    }
+  }
+  &__table-container {
+    flex-basis: 60%;
+  }
+  &__table {
+    width: 90%;
+    height: 450px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(#000, 0.2);
+    border-spacing: 0;
+    border: none;
+    border-collapse: collapse;
+  }
+  &__table-head {
+    background-color: $decor-color;
+    color: $text-side-color;
+  }
+  &__table-head-cell {
+    padding: 25px 20px;
+    text-align: center;
+  }
+  &__table-body-cell {
+    @include text-font;
+    text-align: center;
+    padding: 10px 15px;
+  }
+  &__table-body-row {
+    border-bottom: 1px solid rgb(194, 194, 194);
+    overflow: hidden;
+  }
+}

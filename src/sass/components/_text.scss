@@ -1,8 +1,10 @@
 .title {
   @include title-font;
+  margin-bottom: 6rem;
   &--decor {
     position: relative;
     margin-left: 30px;
+    margin-bottom: 1rem;
     &::before {
       content: "";
       display: block;
