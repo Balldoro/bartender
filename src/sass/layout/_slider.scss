@@ -24,6 +24,7 @@
     max-height: 65px;
     width: 100%;
     overflow: hidden;
+    padding: 0 15%;
   }
   &__arrow {
     position: absolute;
@@ -33,7 +34,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba($text-main-color, 0.8);
     font-size: 2rem;
     width: 15%;
     height: 97%;
@@ -41,6 +41,9 @@
     z-index: 1;
     &--right {
       left: 85%;
+    }
+    &:hover {
+      background-color: rgba(#000, 0.6);
     }
   }
 }
