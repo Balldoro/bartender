@@ -10,5 +10,8 @@
     @include text-font;
     text-decoration: none;
     color: $text-side-color;
+    @media (max-width: 1240px) {
+      color: $text-main-color;
+    }
   }
 }

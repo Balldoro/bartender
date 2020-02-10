@@ -6,19 +6,31 @@
     display: flex;
     position: relative;
     z-index: 3;
+    @media (max-width: 1240px) {
+      flex-direction: column;
+    }
   }
   &__title {
     @include title-font;
     font-size: 1.3rem;
     flex-basis: 100%;
     margin-bottom: 2rem;
+    &--side {
+      @media (max-width: 1240px) {
+        color: $main-color;
+        text-align: center;
+      }
+    }
   }
   &__form {
     flex-basis: 70%;
-    padding: 15px 60px;
+    padding: 25px 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 1240px) {
+      order: 1;
+    }
   }
   &__input-container {
     padding-left: 30px;
@@ -52,11 +64,19 @@
   &__details {
     flex-basis: 30%;
     background-color: $main-color;
-    padding: 15px 25px;
+    padding: 25px;
     box-shadow: -10px 0 10px -10px rgba(#000, 0.2);
+    @media (max-width: 1240px) {
+      order: 0;
+      background-color: $decor-color;
+    }
   }
   &__details-list {
     list-style: none;
+    @media (max-width: 1240px) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
   &__details-item {
     @include text-font;
@@ -64,11 +84,19 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2.5rem;
+    @media (max-width: 1240px) {
+      color: $main-color;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+    }
   }
   &__icon {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: $decor-color;
+    @media (max-width: 1240px) {
+      color: $main-color;
+    }
   }
   &__image-container {
     position: absolute;
