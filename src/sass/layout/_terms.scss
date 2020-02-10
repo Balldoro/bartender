@@ -35,17 +35,14 @@
   &__table {
     width: 90%;
     height: 450px;
-    background-color: #fff;
     box-shadow: 0 0 15px 0 rgba(#000, 0.2);
     border-spacing: 0;
     border: none;
     border-collapse: collapse;
   }
-  &__table-head {
+  &__table-head-cell {
     background-color: $decor-color;
     color: $text-side-color;
-  }
-  &__table-head-cell {
     padding: 25px 20px;
     text-align: center;
   }
@@ -55,6 +52,7 @@
     padding: 10px 15px;
   }
   &__table-body-row {
+    background-color: #fff;
     border-bottom: 1px solid rgb(194, 194, 194);
     overflow: hidden;
   }
