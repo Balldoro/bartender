@@ -7,8 +7,10 @@
     position: relative;
     margin-right: 1rem;
     flex-basis: 33%;
-    &--last {
-      margin-right: 0;
+    @media (max-width: 980px) {
+      &:last-child {
+        display: none;
+      }
     }
   }
   &__image {
@@ -24,7 +26,7 @@
     max-height: 65px;
     width: 100%;
     overflow: hidden;
-    padding: 0 10%;
+    padding: 5px 10%;
   }
   &__arrow {
     position: absolute;
@@ -46,4 +48,7 @@
       background-color: rgba(#000, 0.6);
     }
   }
+}
+.is-disabled {
+  display: none;
 }

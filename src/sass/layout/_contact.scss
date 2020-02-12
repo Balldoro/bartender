@@ -6,19 +6,22 @@
     display: flex;
     position: relative;
     z-index: 3;
-    @media (max-width: 1240px) {
+    @media (max-width: 980px) {
       flex-direction: column;
     }
   }
   &__title {
     @include title-font;
-    font-size: 1.3rem;
     flex-basis: 100%;
     margin-bottom: 2rem;
+    font-size: 1.55rem;
+    @media (max-width: 1240px) {
+      font-size: 1.4rem;
+      text-align: center;
+    }
     &--side {
-      @media (max-width: 1240px) {
+      @media (max-width: 980px) {
         color: $main-color;
-        text-align: center;
       }
     }
   }
@@ -29,6 +32,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     @media (max-width: 1240px) {
+      flex-basis: 80%;
+    }
+    @media (max-width: 980px) {
       order: 1;
     }
   }
@@ -37,6 +43,9 @@
     flex-basis: 100%;
     &--half {
       flex-basis: 45%;
+      @media (max-width: 980px) {
+        flex-basis: 100%;
+      }
     }
   }
   &__label {
@@ -67,15 +76,21 @@
     padding: 25px;
     box-shadow: -10px 0 10px -10px rgba(#000, 0.2);
     @media (max-width: 1240px) {
+      flex-basis: 20%;
+    }
+    @media (max-width: 980px) {
       order: 0;
       background-color: $decor-color;
     }
   }
   &__details-list {
     list-style: none;
-    @media (max-width: 1240px) {
-      display: flex;
-      justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 980px) {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
   &__details-item {
@@ -84,10 +99,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2.5rem;
-    @media (max-width: 1240px) {
+    @media (max-width: 980px) {
       color: $main-color;
-      margin-top: 0.5rem;
-      margin-right: 1rem;
     }
   }
   &__icon {
@@ -95,6 +108,9 @@
     margin-bottom: 1rem;
     color: $decor-color;
     @media (max-width: 1240px) {
+      font-size: 1.7rem;
+    }
+    @media (max-width: 980px) {
       color: $main-color;
     }
   }
@@ -110,6 +126,9 @@
     img {
       opacity: 0.3;
       max-width: 100%;
+    }
+    @media (max-width: 1240px) {
+      display: none;
     }
   }
 }

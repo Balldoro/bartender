@@ -35,6 +35,9 @@
   }
   &__text-content {
     max-width: 650px;
+    @media (max-width: 1240px) {
+      text-align: center;
+    }
   }
   &__decoration {
     flex-basis: 50%;
