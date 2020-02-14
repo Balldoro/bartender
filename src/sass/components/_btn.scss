@@ -32,6 +32,10 @@
     padding: 16px;
     &:first-child {
       margin-right: 3rem;
+      @media (max-width: 710px) {
+        margin: 0 0 1rem 0;
+        width: 100%;
+      }
     }
   }
   &--ghost {
@@ -39,6 +43,9 @@
     border: 2px solid $decor-color;
     color: $text-main-color;
     transition: 0.25s ease-in-out;
+    @media (max-width: 710px) {
+      width: 100%;
+    }
     &::before {
       content: "";
       display: block;

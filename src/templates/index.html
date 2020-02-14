@@ -150,23 +150,33 @@
             <li class="terms__item">
               <button class="text terms__btn">
                 Kurs I-go stopnia
+                <span class="fas fa-chevron-down terms__arrow"></span>
               </button>
             </li>
             <li class="terms__item">
               <button class="text terms__btn terms__btn--active">
                 Kurs II-go stopnia
+                <span class="fas fa-chevron-down terms__arrow"></span>
               </button>
             </li>
             <li class="terms__item">
               <button class="text terms__btn">
                 Kurs dla Instruktorów Barmaństwa
+                <span class="fas fa-chevron-down terms__arrow"></span>
               </button>
             </li>
             <li class="terms__item">
-              <button class="text terms__btn">Kurs dla Imprezowiczów</button>
+              <button class="text terms__btn">
+                Kurs dla Imprezowiczów
+                <span class="fas fa-chevron-down terms__arrow"></span>
+              </button>
             </li>
             <li class="terms__item">
-              <button class="text terms__btn">Kurs Baristyczny</button>
+              <button class="text terms__btn">
+                Kurs Baristyczny<span
+                  class="fas fa-chevron-down terms__arrow"
+                ></span>
+              </button>
             </li>
           </ul>
           <div class="terms__table-container">
@@ -244,22 +254,45 @@
               <div
                 class="contact__input-container contact__input-container--half"
               >
-                <label for="" class="contact__label">Twoje imię</label>
-                <input type="text" class="contact__input" name="" />
+                <label for="contact__name" class="contact__label"
+                  >Twoje imię</label
+                >
+                <input
+                  type="text"
+                  class="contact__input"
+                  name="contact__name"
+                />
               </div>
               <div
                 class="contact__input-container contact__input-container--half"
               >
-                <label for="" class="contact__label">Twój adres e-mail</label>
-                <input type="text" class="contact__input" name="" />
+                <label for="contact__email" class="contact__label"
+                  >Twój adres e-mail</label
+                >
+                <input
+                  type="email"
+                  class="contact__input"
+                  name="contact__email"
+                />
               </div>
               <div class="contact__input-container">
-                <label for="" class="contact__label">Tytuł wiadomości</label>
-                <input type="text" class="contact__input" name="" />
+                <label for="contact__title" class="contact__label"
+                  >Tytuł wiadomości</label
+                >
+                <input
+                  type="text"
+                  class="contact__input"
+                  name="contact__title"
+                />
               </div>
               <div class="contact__input-container">
-                <label for="" class="contact__label">Wiadomość</label>
-                <textarea class="contact__input contact__message"></textarea>
+                <label for="contact__message" class="contact__label"
+                  >Wiadomość</label
+                >
+                <textarea
+                  class="contact__input contact__message"
+                  name="contact__message"
+                ></textarea>
               </div>
               <input type="submit" value="Wyślij!" class="btn contact__btn" />
             </form>
