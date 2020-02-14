@@ -16,7 +16,6 @@
     margin-bottom: 2rem;
     font-size: 1.55rem;
     @media (max-width: 1240px) {
-      font-size: 1.4rem;
       text-align: center;
     }
     &--side {
@@ -106,6 +105,7 @@
     }
     @media (max-width: 710px) {
       flex-direction: column;
+      align-items: center;
     }
   }
   &__details-item {
@@ -139,14 +139,14 @@
     }
   }
   &__image-container {
-    position: absolute;
-    top: 60%;
     max-height: 600px;
     overflow: hidden;
     background: linear-gradient(
       rgba($decor-color, 0.5),
       rgba($decor-color, 0.5)
     );
+    margin-top: -16rem;
+    z-index: -1;
     img {
       opacity: 0.3;
       max-width: 100%;

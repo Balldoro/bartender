@@ -1,0 +1,25 @@
+.footer {
+  background-color: $decor-color;
+  color: $main-color;
+  padding: 15px 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 710px) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    @media (max-width: 710px) {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: 1240px) {
+    margin-top: 4rem;
+  }
+}
