@@ -65,8 +65,8 @@
     }
   }
   &__table {
+    display: none;
     width: 100%;
-    height: 450px;
     box-shadow: 0 0 15px 0 rgba(#000, 0.2);
     border-spacing: 0;
     border: 1px solid rgb(216, 216, 216);
@@ -81,7 +81,7 @@
   &__table-body-cell {
     @include text-font;
     text-align: center;
-    padding: 10px 15px;
+    padding: 15px;
   }
   &__table-body-row {
     background-color: #fff;
