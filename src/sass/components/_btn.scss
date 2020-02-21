@@ -67,4 +67,14 @@
       color: $text-side-color;
     }
   }
+  &--disabled {
+    background-color: #ccc;
+    color: $text-main-color;
+  }
+}
+.slider__slide-hidden {
+  display: none;
+}
+.slider__slide-visible {
+  display: block;
 }

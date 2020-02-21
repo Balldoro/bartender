@@ -20,6 +20,9 @@
       transform: skewY(-4deg);
       transform-origin: top left;
     }
+    @media (max-width: 710px) {
+      transform: skewY(-9deg);
+    }
   }
   &__main-content {
     flex-basis: 50%;

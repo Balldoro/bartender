@@ -17,19 +17,19 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#" class="menu__link">Home</a>
+              <a href="#showcase" class="menu__link">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">O nas</a>
+              <a href="#about" class="menu__link">O nas</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Kursy</a>
+              <a href="#courses" class="menu__link">Kursy</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Terminy kursów</a>
+              <a href="#terms" class="menu__link">Terminy kursów</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Kontakt</a>
+              <a href="#contact" class="menu__link">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -37,7 +37,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="showcase">
+      <section class="showcase" id="showcase">
         <div class="showcase__main-content">
           <div class="showcase__bg"></div>
           <div class="showcase__text-content container">
@@ -49,7 +49,9 @@
               profesjonalne szkolenia barmańskie.
             </p>
             <div class="showcase__call-action">
-              <button class="btn btn--big">Dowiedz się więcej</button>
+              <button class="btn btn--big" id="more-info-btn">
+                Dowiedz się więcej
+              </button>
               <button class="btn btn--big btn--ghost">
                 Umów się na kurs!
               </button>
@@ -58,7 +60,7 @@
         </div>
         <div class="showcase__decoration"></div>
       </section>
-      <section class="section about container">
+      <section class="section about container" id="about">
         <div class="overlay about__wrapper">
           <div class="about__image-container">
             <img src="/assets/about-min.jpg" class="about__image" alt="" />
@@ -66,17 +68,15 @@
           <div class="about__text-container">
             <h2 class="title title--decor">O nas</h2>
             <p class="text about__text">
-              Jesteśmy <span class="special">pierwszą</span> i do dziś
-              <span class="special">jedyną</span> tego typu szkołą w Polsce.
+              Jesteśmy pierwszą i do dziś jedyną tego typu szkołą w Polsce.
               Funkcjonuje w oparciu o metody nauczania szkół amerykańskich. Z
-              powodzeniem działamy już od blisko
-              <span class="special">20&nbsp;lat!</span>
+              powodzeniem działamy już od blisko 20&nbsp;lat!
             </p>
             <button class="btn">Zobacz nasze zajęcia</button>
           </div>
         </div>
       </section>
-      <section class="section container slider">
+      <section class="section container slider" id="slider">
         <div class="slider__slides-container">
           <div class="slider__slide-container" id="slide-1">
             <div class="slider__arrow slider__arrow--left">
@@ -101,7 +101,10 @@
               Katowice 26-04-2018
             </p>
           </div>
-          <div class="slider__slide-container" id="slide-4">
+          <div
+            class="slider__slide-container slider__slide-hidden"
+            id="slide-4"
+          >
             <img src="/assets/gallery4-min.jpg" class="slider__image" alt="" />
             <p class="text slider__slide-text">
               Kurs I-go Stopnia<br />
@@ -113,7 +116,7 @@
           </div>
         </div>
       </section>
-      <section class="section container courses">
+      <section class="section container courses" id="courses">
         <h2 class="title">Nasze kursy</h2>
         <div class="courses__boxes-container">
           <div class="box">
@@ -143,18 +146,18 @@
           </div>
         </div>
       </section>
-      <section class="section container terms">
+      <section class="section container terms" id="terms">
         <h2 class="title">Terminy kursów</h2>
         <div class="terms__content-container">
           <ul class="terms__list">
             <li class="terms__item">
-              <button class="text terms__btn">
+              <button class="text terms__btn terms__btn--active">
                 Kurs I-go stopnia
                 <span class="fas fa-chevron-down terms__arrow"></span>
               </button>
             </li>
             <li class="terms__item">
-              <button class="text terms__btn terms__btn--active">
+              <button class="text terms__btn">
                 Kurs II-go stopnia
                 <span class="fas fa-chevron-down terms__arrow"></span>
               </button>
@@ -193,59 +196,113 @@
               </thead>
               <tbody>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
                 <tr class="terms__table-body-row">
-                  <td class="terms__table-body-cell">Katowice</td>
-                  <td class="terms__table-body-cell">16.12.2019r</td>
-                  <td class="terms__table-body-cell">24.12.2019r</td>
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.12.2019r
+                  </td>
                   <td class="terms__table-body-cell">10:00</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <button
+            class="btn btn--big btn--disabled terms__sign-in"
+            id="getcourse"
+          >
+            Zapisz się!
+          </button>
         </div>
       </section>
-      <section class="section contact">
+      <section class="section contact" id="contact">
         <div class="container">
           <h2 class="title">Kontakt</h2>
           <div class="contact__data-container">

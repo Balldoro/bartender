@@ -18,3 +18,10 @@
     display: none;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+.is-active {
+  background-color: $decor-color !important;
+  color: #fff !important;
+}

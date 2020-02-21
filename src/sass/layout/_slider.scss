@@ -63,3 +63,7 @@
     display: none;
   }
 }
+.is-active {
+  background-color: $decor-color;
+  color: $main-color;
+}

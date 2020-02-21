@@ -69,7 +69,7 @@
     height: 450px;
     box-shadow: 0 0 15px 0 rgba(#000, 0.2);
     border-spacing: 0;
-    border: none;
+    border: 1px solid rgb(216, 216, 216);
     border-collapse: collapse;
   }
   &__table-head-cell {
@@ -87,5 +87,13 @@
     background-color: #fff;
     border-bottom: 1px solid rgb(194, 194, 194);
     overflow: hidden;
+    cursor: pointer;
+  }
+  &__sign-in {
+    margin-left: auto;
+    margin-top: 2rem;
+    @media (max-width: 710px) {
+      margin-right: auto;
+    }
   }
 }
