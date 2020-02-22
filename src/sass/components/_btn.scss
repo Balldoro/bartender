@@ -70,11 +70,16 @@
   &--disabled {
     background-color: #ccc;
     color: $text-main-color;
+    cursor: auto;
+    &:hover {
+      color: $text-main-color;
+    }
+    &:hover::before {
+      transform: scaleX(0);
+    }
   }
-}
-.slider__slide-hidden {
-  display: none;
-}
-.slider__slide-visible {
-  display: block;
+  &--active {
+    background-color: $decor-color;
+    color: $text-side-color;
+  }
 }

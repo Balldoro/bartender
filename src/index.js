@@ -1,88 +1,74 @@
 import "./sass/main.scss";
 
-const toTermsBtn = document.querySelector(".btn--ghost");
-const termsSection = document.querySelector("#terms");
-toTermsBtn.addEventListener("click", () => {
-  termsSection.scrollIntoView({ behavior: "smooth" });
-});
-const toAboutBtn = document.querySelector("#more-info-btn");
-const aboutSection = document.querySelector("#about");
-toAboutBtn.addEventListener("click", () => {
-  aboutSection.scrollIntoView({ behavior: "smooth" });
-});
-const toSliderBtn = document.querySelector("#show-img-btn");
-const sliderSection = document.querySelector("#slider");
-toSliderBtn.addEventListener("click", () => {
-  sliderSection.scrollIntoView({ behavior: "smooth" });
-});
-const termsTables = document.querySelectorAll(".terms__table");
-const allCoursesBtns = document.querySelectorAll(".terms__btn");
-const tableContainer = document.querySelector(".terms__table-container");
-const tableRows = document.querySelectorAll(".terms__table-body-row");
-termsTables[0].classList.add("is-visible");
-tableContainer.appendChild(termsTables[0]);
-allCoursesBtns.forEach(singleCourse => {
-  singleCourse.addEventListener("click", () => {
-    allCoursesBtns.forEach(btn => {
-      btn.classList.remove("terms__btn--active");
-    });
-    tableRows.forEach(row => {
-      row.classList.remove("is-active");
-    });
-    getCourseBtn.classList.remove("is-active");
-    singleCourse.classList.add("terms__btn--active");
-
-    tableContainer.innerHTML = "";
-    if (allCoursesBtns[0].classList.contains("terms__btn--active")) {
-      termsTables[0].classList.add("is-visible");
-      tableContainer.appendChild(termsTables[0]);
-    } else if (allCoursesBtns[1].classList.contains("terms__btn--active")) {
-      termsTables[1].classList.add("is-visible");
-      tableContainer.appendChild(termsTables[1]);
-    } else if (allCoursesBtns[2].classList.contains("terms__btn--active")) {
-      termsTables[2].classList.add("is-visible");
-      tableContainer.appendChild(termsTables[2]);
-    } else if (allCoursesBtns[3].classList.contains("terms__btn--active")) {
-      termsTables[3].classList.add("is-visible");
-      tableContainer.appendChild(termsTables[3]);
-    } else if (allCoursesBtns[4].classList.contains("terms__btn--active")) {
-      termsTables[4].classList.add("is-visible");
-      tableContainer.appendChild(termsTables[4]);
-    }
+function slideToSection(btn, section) {
+  const goToSectionBtn = document.querySelector(btn);
+  goToSectionBtn.addEventListener("click", () => {
+    document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   });
-});
+}
+slideToSection(".btn--ghost", "#terms");
+slideToSection("#more-info-btn", "#about");
+slideToSection("#show-img-btn", "#slider");
+
+function showTable(btnIndex) {
+  const termTables = document.querySelectorAll(".terms__table");
+  termTables.forEach(table => {
+    table.classList.remove("is-visible");
+  });
+  termTables[btnIndex].classList.add("is-visible");
+}
+
+function changeTableBtn() {
+  const tableBtns = document.querySelectorAll(".terms__btn");
+  tableBtns.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      for (let i = 0; i < tableBtns.length; i++) {
+        tableBtns[i].classList.remove("terms__btn--active");
+      }
+      btn.classList.add("terms__btn--active");
+      showTable(index);
+    });
+  });
+}
+
+function selectRow() {
+  const tableRows = document.querySelectorAll(".terms__table-body-row");
+  tableRows.forEach(row => {
+    row.addEventListener("click", () => {
+      if (row.classList.contains("terms__table-body-row--active")) {
+        row.classList.remove("terms__table-body-row--active");
+        getCourseBtn.classList.add("btn--disabled");
+      } else {
+        for (let i = 0; i < tableRows.length; i++) {
+          tableRows[i].classList.remove("terms__table-body-row--active");
+        }
+        row.classList.add("terms__table-body-row--active");
+        getCourseBtn.classList.remove("btn--disabled");
+      }
+    });
+  });
+}
+
+function inputContactMessage() {
+  const activeCourse = document.querySelector(".terms__btn--active");
+  const selectedTerm = document.querySelector(".terms__table-body-row--active");
+  const contactForm = document.querySelector(".contact__form");
+  contactForm.reset();
+  contactForm[
+    "contact__title"
+  ].value = `Zapis na ${activeCourse.textContent.trim()} ${selectedTerm.children[1].textContent.trim()} - ${selectedTerm.children[2].textContent.trim()}`;
+  contactForm["contact__message"].value = `Dzień dobry,
+zapisuję się na ${activeCourse.textContent.trim()} w ${selectedTerm.children[0].textContent.trim()} w dniach ${selectedTerm.children[1].textContent.trim()} - ${selectedTerm.children[2].textContent.trim()}.
+Pozdrawiam.`;
+}
 
 const getCourseBtn = document.querySelector("#getcourse");
-const contactSection = document.querySelector("#contact");
-const contactForm = document.querySelector(".contact__form");
-
-tableRows.forEach(row => {
-  row.addEventListener("click", () => {
-    tableRows.forEach(row => {
-      row.classList.remove("is-active");
-    });
-    row.classList.toggle("is-active");
-    if (row.classList.contains("is-active")) {
-      getCourseBtn.classList.add("is-active");
-    } else {
-      getCourseBtn.classList.remove("is-active");
-    }
-  });
-});
 getCourseBtn.addEventListener("click", () => {
-  if (getCourseBtn.classList.contains("is-active")) {
-    const selectedCourse = document.querySelector(".terms__btn--active");
-    const selectedTerm = document.querySelector(
-      ".terms__table-body-row.is-active"
-    );
-    contactForm.reset();
-    contactSection.scrollIntoView({ behavior: "smooth" });
-    console.log(selectedTerm.children);
-    contactForm[
-      "contact__title"
-    ].value = `Zapis na ${selectedCourse.textContent.trim()} ${selectedTerm.children[1].textContent.trim()} - ${selectedTerm.children[2].textContent.trim()}`;
-    contactForm["contact__message"].value = `Dzień dobry,
-zapisuję się na ${selectedCourse.textContent.trim()} w ${selectedTerm.children[0].textContent.trim()} na godzinę ${selectedTerm.children[3].textContent.trim()} w dniach ${selectedTerm.children[1].textContent.trim()} - ${selectedTerm.children[2].textContent.trim()}.
-Pozdrawiam.`;
+  if (!getCourseBtn.classList.contains("btn--disabled")) {
+    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+    inputContactMessage();
   }
 });
+
+changeTableBtn();
+selectRow();
