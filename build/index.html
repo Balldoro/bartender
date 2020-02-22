@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/60c4a58605.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper container">
+        <span class="logo">Kursy Barmańskie</span>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#showcase" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#about" class="menu__link">O nas</a>
+            </li>
+            <li class="menu__item">
+              <a href="#courses" class="menu__link">Kursy</a>
+            </li>
+            <li class="menu__item">
+              <a href="#terms" class="menu__link">Terminy kursów</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact" class="menu__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger"></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="showcase" id="showcase">
+        <div class="showcase__main-content">
+          <div class="showcase__bg"></div>
+          <div class="showcase__text-content container">
+            <h1 class="showcase__title">
+              Polski Instytut Sztuki Barmańskiej
+            </h1>
+            <p class="showcase__subtitle">
+              Wykonuj swoje obowiązki lepiej i zarabiaj więcej! Proponujemy
+              profesjonalne szkolenia barmańskie.
+            </p>
+            <div class="showcase__call-action">
+              <button class="btn btn--big" id="more-info-btn">
+                Dowiedz się więcej
+              </button>
+              <button class="btn btn--big btn--ghost">
+                Umów się na kurs!
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="showcase__decoration"></div>
+      </section>
+      <section class="section about container" id="about">
+        <div class="overlay about__wrapper">
+          <div class="about__image-container">
+            <img src="/assets/about-min.jpg" class="about__image" alt="" />
+          </div>
+          <div class="about__text-container">
+            <h2 class="title title--decor">O nas</h2>
+            <p class="text about__text">
+              Jesteśmy pierwszą i do dziś jedyną tego typu szkołą w Polsce.
+              Funkcjonuje w oparciu o metody nauczania szkół amerykańskich. Z
+              powodzeniem działamy już od blisko 20&nbsp;lat!
+            </p>
+            <button class="btn" id="show-img-btn">Zobacz nasze zajęcia</button>
+          </div>
+        </div>
+      </section>
+      <section class="section container slider" id="slider">
+        <div class="slider__slides-container">
+          <div class="slider__slide-container" id="slide-1">
+            <div class="slider__arrow slider__arrow--left">
+              <span class="fas fa-chevron-left"></span>
+            </div>
+            <img src="/assets/gallery2-min.jpg" class="slider__image" alt="" />
+            <p class="text slider__slide-text">
+              Workshop PISB <br />Opole 26-04-2018
+            </p>
+          </div>
+          <div class="slider__slide-container" id="slide-2">
+            <img src="/assets/gallery3-min.jpg" class="slider__image" alt="" />
+            <p class="text slider__slide-text">
+              Kurs I-go Stopnia<br />
+              Katowice 26-04-2018
+            </p>
+          </div>
+          <div class="slider__slide-container" id="slide-3">
+            <img src="/assets/gallery6-min.jpg" class="slider__image" alt="" />
+            <p class="text slider__slide-text">
+              Kurs I-go Stopnia<br />
+              Katowice 26-04-2018
+            </p>
+          </div>
+          <div class="slider__slide-container" id="slide-4">
+            <img src="/assets/gallery4-min.jpg" class="slider__image" alt="" />
+            <p class="text slider__slide-text">
+              Kurs I-go Stopnia<br />
+              Katowice 26-04-2018
+            </p>
+            <div class="slider__arrow slider__arrow--right">
+              <span class="fas fa-chevron-right"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section container courses" id="courses">
+        <h2 class="title">Nasze kursy</h2>
+        <div class="courses__boxes-container">
+          <div class="box">
+            <span class="fas fa-glass-martini-alt box__icon"></span>
+            <h3 class="subtitle">Kurs I-go stopnia</h3>
+            <button class="btn box__btn">Dowiedz się więcej</button>
+          </div>
+          <div class="box">
+            <span class="fas fa-glass-martini box__icon"></span>
+            <h3 class="subtitle">Kurs II-go stopnia</h3>
+            <button class="btn box__btn">Dowiedz się więcej</button>
+          </div>
+          <div class="box">
+            <span class="fas fa-cocktail box__icon"></span>
+            <h3 class="subtitle">Kurs dla Instruktorów Barmaństwa</h3>
+            <button class="btn box__btn">Dowiedz się więcej</button>
+          </div>
+          <div class="box">
+            <span class="fas fa-glass-cheers box__icon"></span>
+            <h3 class="subtitle">Kurs Dla Imprezowiczów</h3>
+            <button class="btn box__btn">Dowiedz się więcej</button>
+          </div>
+          <div class="box">
+            <span class="fas fa-coffee box__icon"></span>
+            <h3 class="subtitle">Kurs Baristyczny</h3>
+            <button class="btn box__btn">Dowiedz się więcej</button>
+          </div>
+        </div>
+      </section>
+      <section class="section container terms" id="terms">
+        <h2 class="title">Terminy kursów</h2>
+        <div class="terms__content-container">
+          <ul class="terms__list">
+            <li class="terms__item">
+              <button class="text terms__btn terms__btn--active">
+                Kurs I-go stopnia
+                <span class="fas fa-chevron-down terms__arrow"></span>
+              </button>
+            </li>
+            <li class="terms__item">
+              <button class="text terms__btn">
+                Kurs II-go stopnia
+                <span class="fas fa-chevron-down terms__arrow"></span>
+              </button>
+            </li>
+            <li class="terms__item">
+              <button class="text terms__btn">
+                Kurs dla Instruktorów Barmaństwa
+                <span class="fas fa-chevron-down terms__arrow"></span>
+              </button>
+            </li>
+            <li class="terms__item">
+              <button class="text terms__btn">
+                Kurs dla Imprezowiczów
+                <span class="fas fa-chevron-down terms__arrow"></span>
+              </button>
+            </li>
+            <li class="terms__item">
+              <button class="text terms__btn">
+                Kurs Baristyczny<span
+                  class="fas fa-chevron-down terms__arrow"
+                ></span>
+              </button>
+            </li>
+          </ul>
+          <div class="terms__table-container">
+            <table class="terms__table is-visible">
+              <thead class="terms__table-head">
+                <tr>
+                  <th class="terms__table-head-cell subtitle">
+                    Lokalizacja
+                  </th>
+                  <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Godzina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    16.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    20.12.2019r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    20.01.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    28.01.2019r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    03.02.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    11.02.2019r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Opole
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    03.02.2019r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    11.02.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    24.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    30.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Warszawa
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    24.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    30.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    23.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    31.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Warszawa
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    20.04.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    28.04.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="terms__table">
+              <thead class="terms__table-head">
+                <tr>
+                  <th class="terms__table-head-cell subtitle">
+                    Lokalizacja
+                  </th>
+                  <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Godzina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    04.05.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    12.05.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="terms__table">
+              <thead class="terms__table-head">
+                <tr>
+                  <th class="terms__table-head-cell subtitle">
+                    Lokalizacja
+                  </th>
+                  <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Godzina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice - Wiedeń
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    01.06.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    ---
+                  </td>
+                  <td class="terms__table-body-cell">Do ustalenia</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="terms__table">
+              <thead class="terms__table-head">
+                <tr>
+                  <th class="terms__table-head-cell subtitle">
+                    Lokalizacja
+                  </th>
+                  <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Godzina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    24.01.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    24.01.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    27.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    27.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    08.05.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    08.05.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    19.06.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    19.06.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    10.07.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    10.07.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    07.08.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    07.08.2020r
+                  </td>
+                  <td class="terms__table-body-cell">16:00</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="terms__table">
+              <thead class="terms__table-head">
+                <tr>
+                  <th class="terms__table-head-cell subtitle">
+                    Lokalizacja
+                  </th>
+                  <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+                  <th class="terms__table-head-cell subtitle">Godzina</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell  terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    27.01.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    28.01.2020r
+                  </td>
+                  <td class="terms__table-body-cell">20:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    02.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    03.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    27.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    28.03.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    01.06.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    01.06.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    13.07.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    14.07.2020r
+                  </td>
+                  <td class="terms__table-body-cell">10:00</td>
+                </tr>
+                <tr class="terms__table-body-row">
+                  <td class="terms__table-body-cell terms__table-city">
+                    Katowice
+                  </td>
+                  <td class="terms__table-body-cell terms__table-from">
+                    10.08.2020r
+                  </td>
+                  <td class="terms__table-body-cell terms__table-to">
+                    10.08.2020r
+                  </td>
+                  <td class="terms__table-body-cell">04:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button
+            class="btn btn--big btn--disabled terms__sign-in"
+            id="getcourse"
+          >
+            Zapisz się!
+          </button>
+        </div>
+      </section>
+      <section class="section contact" id="contact">
+        <div class="container">
+          <h2 class="title">Kontakt</h2>
+          <div class="contact__data-container">
+            <form class="contact__form" autocomplete="off">
+              <h3 class="contact__title">Skontaktuj się z nami!</h3>
+              <div
+                class="contact__input-container contact__input-container--half"
+              >
+                <label for="contact__name" class="contact__label"
+                  >Twoje imię</label
+                >
+                <input
+                  type="text"
+                  class="contact__input"
+                  name="contact__name"
+                />
+              </div>
+              <div
+                class="contact__input-container contact__input-container--half"
+              >
+                <label for="contact__email" class="contact__label"
+                  >Twój adres e-mail</label
+                >
+                <input
+                  type="email"
+                  class="contact__input"
+                  name="contact__email"
+                />
+              </div>
+              <div class="contact__input-container">
+                <label for="contact__title" class="contact__label"
+                  >Tytuł wiadomości</label
+                >
+                <input
+                  type="text"
+                  class="contact__input"
+                  name="contact__title"
+                />
+              </div>
+              <div class="contact__input-container">
+                <label for="contact__message" class="contact__label"
+                  >Wiadomość</label
+                >
+                <textarea
+                  class="contact__input contact__message"
+                  name="contact__message"
+                ></textarea>
+              </div>
+              <input type="submit" value="Wyślij!" class="btn contact__btn" />
+            </form>
+            <div class="contact__details">
+              <h3 class="contact__title contact__title--side">
+                Dane kontaktowe
+              </h3>
+              <ul class="contact__details-list">
+                <li class="text contact__details-item">
+                  <span class="fas fa-phone contact__icon"></span>
+                  tel. +48 883 000 768
+                </li>
+                <li class="text contact__details-item">
+                  <span class="fas fa-map-marker-alt contact__icon"></span>
+                  ul.Gliwicka 3<br />
+                  Katowice, 40-507
+                </li>
+                <li class="text contact__details-item">
+                  <span class="fas fa-envelope contact__icon"></span>
+                  kursy@kursybarmanskie.pl
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="contact__image-container">
+          <img src="/assets/contact-small.jpg" alt="" />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__item text">Polski Instytut Sztuki Barmańskiej</li>
+          <li class="footer__item text">Copywright 2020</li>
+          <li class="footer__item text">Created by Marek Miklaszewski</li>
+        </ul>
+      </div>
+    </footer>
+  <script type="text/javascript" src="main-bundle.js"></script></body>
+</html>

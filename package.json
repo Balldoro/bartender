@@ -8,7 +8,8 @@
     "url": "git+https://github.com/Balldoro/bartender.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --colors --config=config/webpack.dev.js"
+    "start": "webpack-dev-server --colors --config=config/webpack.dev.js",
+    "build": "webpack --config=config/webpack.dev.js"
   },
   "author": "",
   "license": "ISC",

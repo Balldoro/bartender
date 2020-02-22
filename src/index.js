@@ -62,6 +62,21 @@ zapisuję się na ${activeCourse.textContent.trim()} w ${selectedTerm.children[0
 Pozdrawiam.`;
 }
 
+function validateForm() {
+  const contactForm = document.querySelector(".contact__form");
+  contactForm.addEventListener("submit", () => {
+    event.preventDefault();
+    const contactContainer = document.querySelectorAll(".contact__input");
+    const contactLabels = document.querySelectorAll(".contact__label");
+    contactContainer.forEach(input => {
+      input.classList.add("contact__input--required");
+    });
+    contactLabels.forEach(label => {
+      label.classList.add("contact__label--required");
+    });
+  });
+}
+validateForm();
 const getCourseBtn = document.querySelector("#getcourse");
 getCourseBtn.addEventListener("click", () => {
   if (!getCourseBtn.classList.contains("btn--disabled")) {

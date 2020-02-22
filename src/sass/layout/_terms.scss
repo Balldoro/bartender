@@ -27,16 +27,14 @@
   &__btn {
     border: none;
     background-color: #fff;
-    border: 1px solid rgb(216, 216, 216);
     border-bottom: none;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     width: 100%;
-    height: 75px;
+    height: 70px;
     padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 5px 0 rgba(#000, 0.2);
     cursor: pointer;
     &:last-child {
       border-bottom: 1px solid rgb(216, 216, 216);
@@ -58,7 +56,7 @@
   }
   &__table-container {
     flex-basis: 100%;
-    margin: -1px 0 0 1px;
+    margin: -1px 0 0 -1px;
     overflow: hidden;
     @media (max-width: 710px) {
       display: none;
@@ -75,7 +73,7 @@
   &__table-head-cell {
     background-color: $decor-color;
     color: $text-side-color;
-    padding: 25px 20px;
+    padding: 12px 20px;
     text-align: center;
   }
   &__table-body-cell {
@@ -85,12 +83,16 @@
   }
   &__table-body-row {
     background-color: #fff;
-    border-bottom: 1px solid rgb(194, 194, 194);
+    border: 1px solid rgb(194, 194, 194);
+    border-collapse: collapse;
     overflow: hidden;
     cursor: pointer;
+    &:nth-child(2n) {
+      background-color: $side-color;
+    }
     &--active {
-      background-color: rgba($decor-color, 0.75) !important;
-      color: #fff !important;
+      background-color: $decor-color !important;
+      color: $text-side-color;
     }
   }
   &__sign-in {

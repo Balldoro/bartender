@@ -60,6 +60,9 @@
     @include text-font;
     font-size: 0.9rem;
     color: #6d6d6d;
+    &--required {
+      color: rgb(187, 72, 72);
+    }
   }
   &__input {
     @include text-font;
@@ -69,6 +72,10 @@
     padding: 8px 5px;
     font-size: 1rem;
     width: 100%;
+    position: relative;
+    &--required {
+      border-bottom: 2px solid rgb(187, 72, 72);
+    }
   }
   &__message {
     resize: none;
