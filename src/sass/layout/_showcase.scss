@@ -1,28 +1,18 @@
 .showcase {
   display: flex;
   height: 90vh;
+  min-height: 550px;
   justify-content: stretch;
   @media (max-width: 1240px) {
-    flex-direction: column;
-    height: auto;
-  }
-  &__bg {
-    display: none;
-    @media (max-width: 1240px) {
-      display: block;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 30%;
-      background-color: $main-color;
-      transform: skewY(-4deg);
-      transform-origin: top left;
-    }
-    @media (max-width: 710px) {
-      transform: skewY(-9deg);
-    }
+    background: linear-gradient(
+        rgba($decor-color, 0.65) 0%,
+        rgba($decor-color, 0.6) 65%,
+        rgba($decor-color, 0.45) 100%
+      ),
+      url("./assets/gallery1-min-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &__main-content {
     flex-basis: 50%;
@@ -31,12 +21,8 @@
     align-items: center;
     justify-content: center;
     @media (max-width: 1240px) {
-      padding-top: 8rem;
-      position: relative;
-    }
-    @media (max-height: 420px) {
-      padding-top: 4rem;
-      position: relative;
+      flex-basis: 100%;
+      color: $text-side-color;
     }
   }
   &__text-content {
@@ -48,31 +34,32 @@
   &__decoration {
     flex-basis: 50%;
     background: linear-gradient(
-        rgba($decor-color, 0.4),
-        rgba($decor-color, 0.4)
+        rgba($decor-color, 0.6),
+        rgba($decor-color, 0.6)
       ),
       url("./assets/gallery1-min-min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     @media (max-width: 1240px) {
-      flex-basis: 60%;
-      background-position: center center;
-      min-height: 450px;
+      display: none;
     }
   }
   &__title {
     @include title-font;
     font-size: 3.2rem;
     margin: 0 0 1rem 0;
-    @media (max-width: 1240px) {
-      font-size: 2.3rem;
+    @media (max-width: 780px) {
+      font-size: 2rem;
     }
   }
   &__subtitle {
     @include text-font;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    margin: 0 0 2.5rem 0;
+    font-size: 1.4rem;
+    margin: 2.5rem 0;
+    line-height: 1.4;
+    @media (max-width: 1240px) {
+      margin-top: 0;
+    }
   }
   &__call-action {
     @media (max-width: 710px) {

@@ -1,7 +1,7 @@
 .hamburger {
   width: 30px;
   height: 4px;
-  background-color: $text-main-color;
+  background-color: $text-side-color;
   position: relative;
   border: none;
   display: none;
@@ -14,7 +14,7 @@
     display: block;
     width: 30px;
     height: 4px;
-    background-color: $text-main-color;
+    background-color: $text-side-color;
   }
   &::after {
     top: 8px;
