@@ -31,7 +31,6 @@
     @media (max-width: 1240px) {
       background-color: #fff;
       color: $text-main-color;
-      border: 2px solid #fff;
       transition: color 0.25s;
     }
     &:hover {
@@ -64,7 +63,7 @@
     &::before {
       content: "";
       display: block;
-      background-color: #1a3557;
+      background-color: $decor-color;
       position: absolute;
       top: 0;
       left: 0;
@@ -74,12 +73,18 @@
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.25s ease-in-out color 0.25s;
+      @media (max-width: 1240px) {
+        background-color: #1a3557;
+      }
     }
     &:hover::before {
       transform: scaleX(1);
     }
     &:hover {
       color: $text-side-color;
+      @media (max-width: 1240px) {
+        border: 2px solid #1a3557;
+      }
     }
   }
   &--disabled {
