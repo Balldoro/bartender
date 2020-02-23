@@ -1,5 +1,11 @@
 import "./sass/main.scss";
-
+import "../public/assets/about-min.jpg";
+import "../public/assets/contact-small.jpg";
+import "../public/assets/gallery1-min-min.jpg";
+import "../public/assets/gallery2-min.jpg";
+import "../public/assets/gallery3-min.jpg";
+import "../public/assets/gallery4-min.jpg";
+import "../public/assets/gallery6-min.jpg";
 function slideToSection(btn, section) {
   const goToSectionBtn = document.querySelector(btn);
   goToSectionBtn.addEventListener("click", () => {
