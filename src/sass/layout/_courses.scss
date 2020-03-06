@@ -2,9 +2,9 @@
   &__boxes-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-template-rows: 220px;
-    grid-auto-rows: 220px;
+    grid-template-rows: 270px;
+    grid-auto-rows: 270px;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }

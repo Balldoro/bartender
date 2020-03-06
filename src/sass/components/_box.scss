@@ -9,6 +9,7 @@
   justify-content: center;
   padding: 30px 20px 70px 20px;
   position: relative;
+  margin-top: 25px;
   &__icon {
     font-size: 2rem;
     color: $decor-color;
@@ -17,5 +18,22 @@
   &__btn {
     position: absolute;
     bottom: 28px;
+  }
+  &__price {
+    @include title-font;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    position: absolute;
+    top: -25px;
+    left: -2%;
+    width: 104%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $decor-color;
+    color: #fff;
+    text-align: center;
   }
 }

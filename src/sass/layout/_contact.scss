@@ -46,6 +46,7 @@
   &__input-container {
     padding-left: 30px;
     flex-basis: 100%;
+    margin: 0.8rem 0 1.5rem 0;
     @media (max-width: 710px) {
       padding: 0;
     }
@@ -63,18 +64,24 @@
     &--required {
       color: rgb(187, 72, 72);
     }
+    &--accept {
+      color: rgb(45, 122, 21);
+    }
   }
   &__input {
     @include text-font;
     border: none;
     border-bottom: 2px solid #c9c9c9;
-    margin: 0.5rem 0 1.5rem 0;
+    margin-top: 0.5rem;
     padding: 8px 5px;
     font-size: 1rem;
     width: 100%;
     position: relative;
     &--required {
       border-bottom: 2px solid rgb(187, 72, 72);
+    }
+    &--accept {
+      border-bottom: 2px solid rgb(45, 122, 21);
     }
   }
   &__message {
@@ -87,6 +94,15 @@
     @media (max-width: 710px) {
       margin: 0 auto;
     }
+  }
+  &__warning {
+    background-color: rgba(224, 56, 56, 0.671);
+    border: 2px solid rgb(187, 72, 72);
+    border-top: none;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    transition: color 2s, border 2s;
   }
   &__details {
     flex-basis: 30%;

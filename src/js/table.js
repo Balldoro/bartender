@@ -1,12 +1,6 @@
 class Table {
-  constructor() {
-    this.tableIGrade;
-    this.tableIIGrade;
-    this.tableInstructors;
-    this.tableParty;
-  }
   createTableIGrade() {
-    return (this.tableIGrade = `
+    return `
     <table class="terms__table is-visible">
     <thead class="terms__table-head">
       <tr>
@@ -116,11 +110,38 @@ class Table {
         <td class="terms__table-body-cell">10:00</td>
       </tr>
     </tbody>
-  </table>`);
+  </table>`;
+  }
+
+  createMediaTableIGrade() {
+    return `
+      <h3>Katowice</h3>
+      <ul>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+      </ul>
+      <h3>Opole</h3>
+      <ul>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+        <li><span>16.12-21.12.2019r</span><span>g.10:00</span></li>
+      </ul>
+    `;
   }
 
   createTableIIGrade() {
-    return (this.tableIIGrade = `
+    return `
         <table class="terms__table">
               <thead class="terms__table-head">
                 <tr>
@@ -147,11 +168,11 @@ class Table {
                 </tr>
               </tbody>
             </table>
-            `);
+            `;
   }
 
   createTableInstructors() {
-    return (this.tableInstructors = `
+    return `
         <table class="terms__table">
         <thead class="terms__table-head">
           <tr>
@@ -178,11 +199,11 @@ class Table {
           </tr>
         </tbody>
       </table>
-        `);
+        `;
   }
 
   createTableParty() {
-    return (this.tableParty = `
+    return `
         <table class="terms__table">
               <thead class="terms__table-head">
                 <tr>
@@ -269,7 +290,97 @@ class Table {
                 </tr>
               </tbody>
             </table>
-        `);
+        `;
+  }
+
+  createBaristaTable() {
+    return `
+    <table class="terms__table">
+    <thead class="terms__table-head">
+      <tr>
+        <th class="terms__table-head-cell subtitle">
+          Lokalizacja
+        </th>
+        <th class="terms__table-head-cell subtitle">Od kiedy?</th>
+        <th class="terms__table-head-cell subtitle">Do kiedy?</th>
+        <th class="terms__table-head-cell subtitle">Godzina</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell  terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          27.01.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          28.01.2020r
+        </td>
+        <td class="terms__table-body-cell">20:00</td>
+      </tr>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          02.03.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          03.03.2020r
+        </td>
+        <td class="terms__table-body-cell">10:00</td>
+      </tr>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          27.03.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          28.03.2020r
+        </td>
+        <td class="terms__table-body-cell">10:00</td>
+      </tr>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          01.06.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          01.06.2020r
+        </td>
+        <td class="terms__table-body-cell">10:00</td>
+      </tr>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          13.07.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          14.07.2020r
+        </td>
+        <td class="terms__table-body-cell">10:00</td>
+      </tr>
+      <tr class="terms__table-body-row">
+        <td class="terms__table-body-cell terms__table-city">
+          Katowice
+        </td>
+        <td class="terms__table-body-cell terms__table-from">
+          10.08.2020r
+        </td>
+        <td class="terms__table-body-cell terms__table-to">
+          10.08.2020r
+        </td>
+        <td class="terms__table-body-cell">04:00</td>
+      </tr>
+    </tbody>
+  </table>`;
   }
 }
 export default Table;

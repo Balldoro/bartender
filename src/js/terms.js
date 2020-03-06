@@ -4,8 +4,14 @@ class Terms {
   constructor() {
     this.tableContainer = document.querySelector(".terms__table-container");
     this.changingTermBtns = document.querySelectorAll(".terms__btn");
-    this.tableRows = document.querySelectorAll(".terms__table-body-row");
     this.singInButton = document.querySelector("#getcourse");
+    this.table = new Table();
+  }
+
+  init() {
+    const activeBtn = document.querySelector(".terms__btn--active");
+    this.showTable(activeBtn);
+    this.changeActiveBtn();
   }
 
   changeActiveBtn() {
@@ -15,17 +21,42 @@ class Terms {
           btn.classList.remove("terms__btn--active");
         });
         btn.classList.add("terms__btn--active");
+        this.showTable(btn);
         this.singInButton.classList.remove("btn--active");
-        this.removeActiveTerm();
       });
     });
   }
 
+  showTable(activeBtn) {
+    const tableForActiveButton = activeBtn.getAttribute("data-tableName");
+    switch (tableForActiveButton) {
+      case "Igrade":
+        this.tableContainer.innerHTML = this.table.createTableIGrade();
+        break;
+      case "IIgrade":
+        this.tableContainer.innerHTML = this.table.createTableIIGrade();
+        break;
+      case "instructors":
+        this.tableContainer.innerHTML = this.table.createTableInstructors();
+        break;
+      case "party":
+        this.tableContainer.innerHTML = this.table.createTableParty();
+        break;
+      case "barista":
+        this.tableContainer.innerHTML = this.table.createBaristaTable();
+        break;
+    }
+    this.selectTerm();
+  }
+
   selectTerm() {
-    this.tableRows.forEach(row => {
+    const tableRows = document.querySelectorAll(".terms__table-body-row");
+    tableRows.forEach(row => {
       row.addEventListener("click", () => {
         if (!row.classList.contains("terms__table-body-row--active")) {
-          this.removeActiveTerm();
+          tableRows.forEach(row => {
+            row.classList.remove("terms__table-body-row--active");
+          });
           row.classList.add("terms__table-body-row--active");
         } else {
           row.classList.remove("terms__table-body-row--active");
@@ -35,15 +66,14 @@ class Terms {
     });
   }
 
-  removeActiveTerm() {
-    this.tableRows.forEach(row => {
-      row.classList.remove("terms__table-body-row--active");
-    });
-  }
-
   activateSignInButton(row) {
     if (row.classList.contains("terms__table-body-row--active")) {
       this.singInButton.classList.add("btn--active");
+      this.singInButton.addEventListener("click", () => {
+        document
+          .querySelector("#contact")
+          .scrollIntoView({ behavior: "smooth" });
+      });
     } else {
       this.singInButton.classList.remove("btn--active");
     }

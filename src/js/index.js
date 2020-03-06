@@ -4,13 +4,16 @@ import "../images/contact-small.jpg";
 import "../images/gallery1-min-min.jpg";
 import Slider from "./slider";
 import Terms from "./terms";
+import Form from "./form";
 
 const term = new Terms();
-term.changeActiveBtn();
-term.selectTerm();
+term.init();
 
 const slider = new Slider();
-slider.showArrows();
+slider.init();
+
+const form = new Form();
+form.validateForm();
 
 const buttonsToSections = document.querySelectorAll("[data-target]");
 buttonsToSections.forEach(button => {
