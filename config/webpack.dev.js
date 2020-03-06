@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/index.js"
+    main: "./src/js/index.js"
   },
   output: {
     path: path.join(__dirname, "../build"),
@@ -32,7 +32,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "assets/"
+          outputPath: "images/"
         }
       }
     ]
@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "src/templates/index.html",
+      template: "src/html/index.html",
       filename: "index.html"
     })
   ]

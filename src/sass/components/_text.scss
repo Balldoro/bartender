@@ -14,6 +14,9 @@
       background-color: $decor-color;
       position: absolute;
       left: -30px;
+      @media (max-width: 710px) {
+        display: none;
+      }
     }
     @media (max-width: 710px) {
       margin-left: 0;
@@ -34,7 +37,4 @@
   @media (max-width: 1240px) {
     font-size: 1rem;
   }
-}
-.special {
-  color: $decor-color;
 }

@@ -101,5 +101,9 @@
   &--active {
     background-color: $decor-color;
     color: $text-side-color;
+    cursor: pointer;
+    &:hover {
+      color: $text-side-color;
+    }
   }
 }
