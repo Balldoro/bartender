@@ -8,36 +8,26 @@ class Form {
     this.form.addEventListener("submit", event => {
       event.preventDefault();
       this.inputs.forEach(input => {
-        input.value === "" ? this.wrongForm(input) : this.correctForm(input);
+        input.value === "" ? this.wrongInput(input) : this.correctInput(input);
       });
     });
   }
 
-  correctForm(input) {
+  correctInput(input) {
     input.labels.forEach(inputLabel => {
       inputLabel.classList.add("contact__label--accept");
     });
-    input.classList.add("contact__input--accept");
+    input.classList.remove("contact__wrong");
+    input.classList.add("contact__correct");
   }
 
-  wrongForm(input) {
+  wrongInput(input) {
     input.labels.forEach(inputLabel => {
       inputLabel.classList.remove("contact__label--accept");
-      inputLabel.classList.add("contact__label--required");
+      inputLabel.classList.add("contact__label--wrong");
     });
-    input.classList.remove("contact__input--accept");
-    input.classList.add("contact__input--required");
-    this.createWarningMessage(input);
-  }
-
-  createWarningMessage(input) {
-    const message = document.createElement("div");
-    message.classList.add("contact__warning");
-    message.textContent = "Uzupełnij to pole";
-    input.parentElement.appendChild(message);
-    setTimeout(() => {
-      input.parentElement.removeChild(message);
-    }, 3000);
+    input.classList.remove("contact__correct");
+    input.classList.add("contact__wrong");
   }
 }
 export default Form;

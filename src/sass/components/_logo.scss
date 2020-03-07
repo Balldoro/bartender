@@ -1,6 +1,10 @@
 .logo {
   @include text-font;
+  margin: 15px 0;
   @media (max-width: 1240px) {
     color: $text-side-color;
+  }
+  @media (max-width: 980px) {
+    color: $text-main-color;
   }
 }

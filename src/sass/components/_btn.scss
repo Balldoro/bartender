@@ -13,7 +13,7 @@
   &::before {
     content: "";
     display: block;
-    background-color: #1a3557;
+    background-color: $side-color;
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
     z-index: -1;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.25s ease-in-out;
+    transition: transform 0.15s ease-in-out;
   }
   &:hover::before {
     transform: scaleX(1);

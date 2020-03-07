@@ -22,7 +22,7 @@ class Terms {
         });
         btn.classList.add("terms__btn--active");
         this.showTable(btn);
-        this.singInButton.classList.remove("btn--active");
+        this.singInButton.classList.add("btn--disabled");
       });
     });
   }
@@ -68,14 +68,16 @@ class Terms {
 
   activateSignInButton(row) {
     if (row.classList.contains("terms__table-body-row--active")) {
-      this.singInButton.classList.add("btn--active");
+      this.singInButton.classList.remove("btn--disabled");
       this.singInButton.addEventListener("click", () => {
-        document
-          .querySelector("#contact")
-          .scrollIntoView({ behavior: "smooth" });
+        if (!this.singInButton.classList.contains("btn--disabled")) {
+          document
+            .querySelector("#contact")
+            .scrollIntoView({ behavior: "smooth" });
+        }
       });
     } else {
-      this.singInButton.classList.remove("btn--active");
+      this.singInButton.classList.add("btn--disabled");
     }
   }
 }

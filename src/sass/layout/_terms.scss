@@ -88,7 +88,7 @@
     overflow: hidden;
     cursor: pointer;
     &:nth-child(2n) {
-      background-color: $side-color;
+      background-color: $overlay-color;
     }
     &--active {
       background-color: $decor-color !important;

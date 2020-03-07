@@ -13,6 +13,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: calc(100vh - 70px);
   }
   &__main-content {
     flex-basis: 50%;
@@ -48,8 +49,9 @@
     @include title-font;
     font-size: 3.2rem;
     margin: 0 0 1rem 0;
-    @media (max-width: 780px) {
+    @media (max-width: 710px) {
       font-size: 2rem;
+      text-transform: uppercase;
     }
   }
   &__subtitle {
@@ -59,6 +61,9 @@
     line-height: 1.4;
     @media (max-width: 1240px) {
       margin-top: 0;
+    }
+    @media (max-width: 710px) {
+      font-size: 1.2rem;
     }
   }
   &__call-action {

@@ -6,28 +6,50 @@ import Slider from "./slider";
 import Terms from "./terms";
 import Form from "./form";
 
-const term = new Terms();
-term.init();
+class Start {
+  constructor() {
+    this.slider = new Slider();
+    this.terms = new Terms();
+    this.form = new Form();
+    this.goToButtons = document.querySelectorAll("[data-target]");
+    this.hamburger = document.querySelector(".hamburger");
+    this.menu = document.querySelector(".menu");
+    this.menuList = document.querySelector(".menu__list");
+    this.menuItem = document.querySelectorAll(".menu__item");
+  }
 
-const slider = new Slider();
-slider.init();
+  openMobileMenu() {
+    this.hamburger.addEventListener("click", () => {
+      this.menu.classList.toggle("menu--active");
+    });
+  }
 
-const form = new Form();
-form.validateForm();
+  init() {
+    this.slideToSection();
+    this.slider.init();
+    this.terms.init();
+    this.form.validateForm();
+  }
 
-const buttonsToSections = document.querySelectorAll("[data-target]");
-buttonsToSections.forEach(button => {
-  slideToSection(button);
-});
-
-function slideToSection(button) {
-  button.addEventListener("click", () => {
-    const buttonTarget = button.getAttribute("data-target");
-    document.querySelector(buttonTarget).scrollIntoView({ behavior: "smooth" });
-  });
+  slideToSection() {
+    this.goToButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const buttonTarget = button.getAttribute("data-target");
+        document
+          .querySelector(buttonTarget)
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  }
 }
 
-function inputContactMessage() {
+addEventListener("DOMContentLoaded", () => {
+  const start = new Start();
+  start.init();
+  start.openMobileMenu();
+});
+
+/* function inputContactMessage() {
   const activeCourse = document.querySelector(".terms__btn--active");
   const selectedTerm = document.querySelector(".terms__table-body-row--active");
   const contactForm = document.querySelector(".contact__form");
@@ -37,3 +59,4 @@ function inputContactMessage() {
 zapisuję się na ${activeCourse.textContent.trim()} w ${selectedTerm.children[0].textContent.trim()} w dniach ${selectedTerm.children[1].textContent.trim()} - ${selectedTerm.children[2].textContent.trim()}.
 Pozdrawiam.`;
 }
+ */
