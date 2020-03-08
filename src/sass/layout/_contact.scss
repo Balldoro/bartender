@@ -61,10 +61,10 @@
     @include text-font;
     font-size: 0.9rem;
     color: #6d6d6d;
-    &--required {
+    &--wrong {
       color: rgb(187, 72, 72);
     }
-    &--accept {
+    &--correct {
       color: rgb(45, 122, 21);
     }
   }
@@ -77,6 +77,18 @@
     font-size: 1rem;
     width: 100%;
     position: relative;
+    &--wrong {
+      border-bottom: 2px solid rgb(187, 72, 72);
+      background: url("./assets/times-solid.svg") no-repeat;
+      background-size: 12px;
+      background-position: 99% 50%;
+    }
+    &--correct {
+      border-bottom: 2px solid rgb(45, 122, 21);
+      background: url("./assets/check-solid.svg") no-repeat;
+      background-size: 12px;
+      background-position: 99% 50%;
+    }
   }
   &__message {
     resize: none;
@@ -88,18 +100,6 @@
     @media (max-width: 710px) {
       margin: 0 auto;
     }
-  }
-  &__wrong {
-    border-bottom: 2px solid rgb(187, 72, 72);
-    background: url("./assets/times-solid.svg") no-repeat;
-    background-size: 12px;
-    background-position: 99% 50%;
-  }
-  &__correct {
-    border-bottom: 2px solid rgb(45, 122, 21);
-    background: url("./assets/check-solid.svg") no-repeat;
-    background-size: 12px;
-    background-position: 99% 50%;
   }
   &__details {
     flex-basis: 30%;

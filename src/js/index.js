@@ -20,6 +20,7 @@ class Start {
 
   openMobileMenu() {
     this.hamburger.addEventListener("click", () => {
+      this.hamburger.classList.toggle("hamburger--active");
       this.menu.classList.toggle("menu--active");
     });
   }
