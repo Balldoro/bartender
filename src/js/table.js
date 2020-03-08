@@ -13,7 +13,7 @@ class Table {
       </tr>
     </thead>
     <tbody>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell  terms__table-city">
           Katowice
         </td>
@@ -25,7 +25,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -37,7 +37,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -49,7 +49,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Opole
         </td>
@@ -61,7 +61,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -73,7 +73,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Warszawa
         </td>
@@ -85,7 +85,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -97,7 +97,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row"  tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Warszawa
         </td>
@@ -154,7 +154,7 @@ class Table {
                 </tr>
               </thead>
               <tbody>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell  terms__table-city">
                     Katowice
                   </td>
@@ -185,7 +185,7 @@ class Table {
           </tr>
         </thead>
         <tbody>
-          <tr class="terms__table-body-row">
+          <tr class="terms__table-body-row" tabindex="0">
             <td class="terms__table-body-cell  terms__table-city">
               Katowice - Wiedeń
             </td>
@@ -216,7 +216,7 @@ class Table {
                 </tr>
               </thead>
               <tbody>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell  terms__table-city">
                     Katowice
                   </td>
@@ -228,7 +228,7 @@ class Table {
                   </td>
                   <td class="terms__table-body-cell">16:00</td>
                 </tr>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell terms__table-city">
                     Katowice
                   </td>
@@ -240,7 +240,7 @@ class Table {
                   </td>
                   <td class="terms__table-body-cell">16:00</td>
                 </tr>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell terms__table-city">
                     Katowice
                   </td>
@@ -252,7 +252,7 @@ class Table {
                   </td>
                   <td class="terms__table-body-cell">16:00</td>
                 </tr>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell terms__table-city">
                     Katowice
                   </td>
@@ -264,7 +264,7 @@ class Table {
                   </td>
                   <td class="terms__table-body-cell">16:00</td>
                 </tr>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell terms__table-city">
                     Katowice
                   </td>
@@ -276,7 +276,7 @@ class Table {
                   </td>
                   <td class="terms__table-body-cell">16:00</td>
                 </tr>
-                <tr class="terms__table-body-row">
+                <tr class="terms__table-body-row" tabindex="0">
                   <td class="terms__table-body-cell terms__table-city">
                     Katowice
                   </td>
@@ -307,7 +307,7 @@ class Table {
       </tr>
     </thead>
     <tbody>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell  terms__table-city">
           Katowice
         </td>
@@ -319,7 +319,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">20:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -331,7 +331,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -343,7 +343,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -355,7 +355,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>
@@ -367,7 +367,7 @@ class Table {
         </td>
         <td class="terms__table-body-cell">10:00</td>
       </tr>
-      <tr class="terms__table-body-row">
+      <tr class="terms__table-body-row" tabindex = "0">
         <td class="terms__table-body-cell terms__table-city">
           Katowice
         </td>

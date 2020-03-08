@@ -4,6 +4,7 @@ class Terms {
   constructor() {
     this.tableContainer = document.querySelector(".terms__table-container");
     this.changingTermBtns = document.querySelectorAll(".terms__btn");
+    this.tableRows;
     this.singInButton = document.querySelector("#getcourse");
     this.table = new Table();
   }
@@ -46,23 +47,30 @@ class Terms {
         this.tableContainer.innerHTML = this.table.createBaristaTable();
         break;
     }
+    this.tableRows = document.querySelectorAll(".terms__table-body-row");
     this.selectTerm();
   }
 
-  selectTerm() {
-    const tableRows = document.querySelectorAll(".terms__table-body-row");
-    tableRows.forEach(row => {
-      row.addEventListener("click", () => {
-        if (!row.classList.contains("terms__table-body-row--active")) {
-          tableRows.forEach(row => {
-            row.classList.remove("terms__table-body-row--active");
-          });
-          row.classList.add("terms__table-body-row--active");
-        } else {
-          row.classList.remove("terms__table-body-row--active");
-        }
-        this.activateSignInButton(row);
+  activateTerm(row) {
+    if (!row.classList.contains("terms__table-body-row--active")) {
+      this.tableRows.forEach(row => {
+        row.classList.remove("terms__table-body-row--active");
       });
+      row.classList.add("terms__table-body-row--active");
+    } else {
+      row.classList.remove("terms__table-body-row--active");
+    }
+    this.activateSignInButton(row);
+  }
+
+  selectTerm() {
+    this.tableRows.forEach(row => {
+      row.addEventListener("keyup", event => {
+        if (event.keyCode === 13) {
+          this.activateTerm(row);
+        }
+      });
+      row.addEventListener("click", () => this.activateTerm(row));
     });
   }
 

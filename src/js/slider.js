@@ -12,13 +12,7 @@ class Slider {
   }
 
   init() {
-    setInterval(() => {
-      this.slides.push(this.slides[0]);
-      this.slides.shift();
-      this.slides.forEach(slide => {
-        this.slidesContainer.appendChild(slide);
-      });
-    }, 1000);
+    console.log(window.matchMedia("(max-width: 710px)").matches);
   }
 }
 export default Slider;
